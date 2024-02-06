@@ -57,7 +57,7 @@
 <body>
     <div id="main">
             <h1>Menu1</h1>
-            <button id="add_game">add gam1e</button>
+            <button id="add_game">add game3</button>
     </div>
     <form id="form">
             <input type="text" placeholder="Название игры" id="name">
@@ -81,12 +81,12 @@
             let name = document.getElementById("name").value;
             let tags = document.getElementById("tags").value;
             let url = document.getElementById("url").value;
-            
+
             let data = {
                 name: name,
                 tags: tags,
                 url: url
-            }
+            };
             tg.send(JSON.stringify(data));
             tg.close();
 
