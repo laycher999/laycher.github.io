@@ -78,14 +78,14 @@
         });
 
         finish.addEventListener("click", () => {
-            let name = document.getElementById("name").value;
-            let tags = document.getElementById("tags").value;
-            let url = document.getElementById("url").value;
+            let name1 = document.getElementById("name").value;
+            let tags1 = document.getElementById("tags").value;
+            let url1 = document.getElementById("url").value;
 
             let data = {
-                name: name,
-                tags: tags,
-                url: url
+                name: name1,
+                tags: tags1,
+                url: url1
             };
             tg.send(JSON.stringify(data));
             tg.close();
