@@ -81,8 +81,13 @@
             let name = document.getElementById("name").value;
             let tags = document.getElementById("tags").value;
             let url = document.getElementById("url").value;
-
-            tg.send(name)
+            
+            let data = {
+                name: name,
+                tags: tags,
+                url: url
+            }
+            tg.send(JSON.stringify(data));
             tg.close();
 
 
