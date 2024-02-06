@@ -59,14 +59,48 @@
 <body>
     <div id="main">
             <h1>Menu1</h1>
-            <button id="add_game">add game5</button>
+            <button id="add_game">add game3</button>
     </div>
     <form id="form">
-            <input type="text" placeholder="Название игры" id="name">
-            <input type="text" placeholder="Тэги" id="tags">
-            <input type="text" placeholder="Путь до картинки" id="url">
-            <button id="finish">Добавить</button>
-    </form>
+        <input type="text" placeholder="Название игры" id="name">
+        <br>
+        <input type="text" placeholder="Тэги" id="tags">
+        <br>
+        <input type="text" placeholder="Путь до картинки" id="url">\
+        <br>
+    <legend>Choose your interests</legend>
+    <div>
+      <label>
+        <input class="cb" type="checkbox" id="coding" name="interest" value="coding" />
+        Coding
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="music" name="interest" value="music" />
+        Music
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="art" name="interest" value="art" />
+        Art
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="sports" name="interest" value="sports" />
+        Sports
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="cooking" name="interest" value="cooking" />
+        Cooking
+      </label>
+    </div>
+    <div>
+        <button id="finish">Добавить</button>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp
@@ -83,12 +117,16 @@
             let name1 = document.getElementById("name").value;
             let tags1 = document.getElementById("tags").value;
             let url1 = document.getElementById("url").value;
+            let tags = document.getElementByClassName("cb").value;
+
 
             let data = {
                 name: name1,
                 tags: tags1,
-                url: url1
+                url: url1,
+                tag: tags
             };
+
             tg.sendData(JSON.stringify(data));
             tg.close();
         });
