@@ -77,6 +77,14 @@
             document.getElementById("form").style.display = "block";
         });
 
+        finish.addEventListener("click", () => {
+            let name = document.getElementById("name").value;
+            let tags = document.getElementById("tags").value;
+            let url = document.getElementById("url").value;
+
+            tg.send(name,tags,url)
+            tg.close();
+
 
 
     </script>
