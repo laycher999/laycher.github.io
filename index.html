@@ -117,10 +117,10 @@
             let name1 = document.getElementById("name").value;
             let tags1 = document.getElementById("tags").value;
             let url1 = document.getElementById("url").value;
-            let tags = '';
+            var tags = [];
             var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
                  for (var checkbox of markedCheckbox) {
-                    tags.append(checkbox.value + ' ');
+                    tags.push(checkbox.value);
                     }
 
 
