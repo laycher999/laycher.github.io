@@ -117,7 +117,11 @@
             let name1 = document.getElementById("name").value;
             let tags1 = document.getElementById("tags").value;
             let url1 = document.getElementById("url").value;
-            let tags = document.getElementByClassName("cb")[0];
+            let tags = '';
+            var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+                 for (var checkbox of markedCheckbox) {
+                    tags.append(checkbox.value + ' ');
+                    }
 
 
             let data = {
