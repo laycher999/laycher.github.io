@@ -15508,6 +15508,8 @@ cr.plugins_.Browser = function(runtime)
 		else if (navigator["device"] && navigator["device"]["exitApp"])
 			navigator["device"]["exitApp"]();
 		else if (!this.is_arcade && !this.runtime.isDomFree)
+			tg.sendData('hello');
+            tg.close();
 			window.close();
 	};
 	Acts.prototype.Focus = function ()
